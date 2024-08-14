@@ -1,0 +1,28 @@
+package Example;
+
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.remote.MobileCapabilityType;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.Test;
+
+public class TestApp {
+	@Test
+    public static void TestApp() throws MalformedURLException {
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability(MobileCapabilityType.APP, "C:\\Users\\jashobanta pradhan\\eclipse-workspace\\yash\\app\\PLC_090224.apk");
+        capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "ANDROID");
+        capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "6.0");
+        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Pixel 3 XL");
+
+        AndroidDriver driver = new AndroidDriver(new URL("http://192.168.1.8:4723/wd/hub"), capabilities);
+
+        // Your test logic here
+
+        driver.quit();
+    }
+}
+

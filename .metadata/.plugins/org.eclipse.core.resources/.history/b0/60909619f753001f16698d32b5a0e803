@@ -1,0 +1,43 @@
+package DltTest;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.*;
+
+public class SchoolApp {
+
+	public String baseUrl = "https://dltschool64.dolittletech.co.in/site/login";
+	public WebDriver driver;
+	
+	@BeforeTest
+	public  void setUp() {
+		driver = new FirefoxDriver();
+		driver.manage().window().maximize();
+		driver.get(baseUrl);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+	}
+	
+	@Test
+	public void loginTest() {
+		driver.findElement(By.id("form-username")).sendKeys("superadmin@gmail.com");
+		driver.findElement(By.id("form-password")).sendKeys("123456");
+		driver.findElement(By.xpath("//button[normalize-space()='Sign In']")).submit();
+		
+		String pageTitle = driver.getTitle();
+		if (pageTitle.equals("Do Little Technologies")) {
+			System.out.println("Login Successful!");
+		}else {
+			System.out.println("Login failed!");
+		}
+	}
+	
+	public void tearDown() throws Throwable {
+		Thread.sleep(5000);
+		driver.close();
+		driver.quit();
+	}
+	
+}

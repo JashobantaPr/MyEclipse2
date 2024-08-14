@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;practice.PrintV_C_D_SC&apos; to &apos;PrintVowel&apos;&#x0D;&#x0A;- Original project: &apos;javaprogramming&apos;&#x0D;&#x0A;- Original element: &apos;practice.PrintV_C_D_SC&apos;&#x0D;&#x0A;- Renamed element: &apos;practice.PrintVowel&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;PrintV_C_D_SC&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;practice{PrintV_C_D_SC.java[PrintV_C_D_SC" matchStrategy="1" name="PrintVowel" qualified="false" references="true" similarDeclarations="false" stamp="1692278798973" textual="false" version="1.0"/>
+</session>
